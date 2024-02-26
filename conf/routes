@@ -1,0 +1,17 @@
+# conf/routes
+GET  /                   controllers.HomeController.index()
+GET  /lowRisk      controllers.HomeController.lowRisk()
+GET  /mediumRisk   controllers.HomeController.mediumRisk()
+GET  /highRisk     controllers.HomeController.highRisk()
+
+GET  /login              controllers.AuthController.login()
+POST /authenticate       controllers.AuthController.authenticate()
+GET  /logout             controllers.AuthController.logout()
+GET  /assets/*file       controllers.Assets.versioned(path="/public", file: Asset)
+
+
+# conf/routes
+GET     /users                  controllers.UserCrud.getUsers
+POST    /users/:username/:password controllers.UserCrud.createUser(username: String, password: String)
+PUT     /users/:id/:newPassword controllers.UserCrud.updateUser(id: Long, newPassword: String)
+DELETE  /users/:id              controllers.UserCrud.deleteUser(id: Long)

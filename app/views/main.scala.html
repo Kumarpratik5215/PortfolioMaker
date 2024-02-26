@@ -1,0 +1,22 @@
+<!-- app/views/main.scala.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/main.css")">
+    <title>Stocks</title>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to the Stock Market!</h1>
+    <p>Select the risk level:</p>
+    <ul>
+        <li><a href="@routes.HomeController.lowRisk()">Low Risk Stocks</a></li>
+        <li><a href="@routes.HomeController.mediumRisk()">Medium Risk Stocks</a></li>
+        <li><a href="@routes.HomeController.highRisk()">High Risk Stocks</a></li>
+    </ul>
+    <p><a href="@routes.AuthController.logout()">Logout</a></p>
+</div>
+</body>
+</html>
