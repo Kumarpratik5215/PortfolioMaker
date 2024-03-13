@@ -71,8 +71,6 @@ class AuthController @Inject()(cc: ControllerComponents, messagesApi: MessagesAp
       val username = args("username").head
       val password = args("password").head
 
-      // Placeholder for authentication logic
-      //val isAuthenticated = Users.auth(username, password)
 
       if (true) {
         Redirect(routes.HomeController.index()).flashing("success" -> "Login successful!").withSession("username" -> username)

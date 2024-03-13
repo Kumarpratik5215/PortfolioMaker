@@ -24,4 +24,19 @@ class HomeController @Inject()(cc: ControllerComponents, messagesApi: MessagesAp
   def highRisk = Action { implicit request =>
     Ok(views.html.stocks.highRisk())
   }
+
+
+  def buyNow: Action[AnyContent] = Action { implicit request =>
+    Ok(views.html.stocks.buyNow())
+  }
+
+//def buyNow: Action[AnyContent] = Action { implicit request =>
+//  Ok(buyNow()) // Render the buyNow view using the apply method
+//}
+
+
+  def sharesWithPE :  Action[AnyContent] = Action { implicit request =>
+    Ok(views.html.stocks.sharesWithPE())
+  }
+
 }

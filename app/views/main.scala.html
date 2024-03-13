@@ -6,6 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/main.css")">
     <title>Stocks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .logout-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -15,8 +67,10 @@
         <li><a href="@routes.HomeController.lowRisk()">Low Risk Stocks</a></li>
         <li><a href="@routes.HomeController.mediumRisk()">Medium Risk Stocks</a></li>
         <li><a href="@routes.HomeController.highRisk()">High Risk Stocks</a></li>
+        <li><a href="@routes.HomeController.buyNow()">Shares to Buy Now</a></li>
+        <li><a href="@routes.HomeController.sharesWithPE()">Nifty50 Shares with PE</a></li>
     </ul>
-    <p><a href="@routes.AuthController.logout()">Logout</a></p>
+    <p class="logout-link"><a href="@routes.AuthController.logout()">Logout</a></p>
 </div>
 </body>
 </html>

@@ -3,6 +3,8 @@ GET  /                   controllers.HomeController.index()
 GET  /lowRisk      controllers.HomeController.lowRisk()
 GET  /mediumRisk   controllers.HomeController.mediumRisk()
 GET  /highRisk     controllers.HomeController.highRisk()
+GET  /buyNow       controllers.HomeController.buyNow()
+GET  /sharesWithPE controllers.HomeController.sharesWithPE()
 
 GET  /login              controllers.AuthController.login()
 POST /authenticate       controllers.AuthController.authenticate()
